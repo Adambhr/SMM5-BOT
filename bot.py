@@ -5,16 +5,16 @@ import time
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from functions import insertUser, track_exists, addBalance, cutBalance, getData, addRefCount, isExists, setWelcomeStaus, setReferredStatus
 
-bot_token = "7164848555:AAHrZed0R3avstft8fWXUaopadC7TeJ2ewg" #bot token from @BotFather
-SmmPanelApi = "e4460be4a7457df2588c12b0fa20d644" # api key from eadysmmpanel.com you can change api link
+bot_token = "8341027913:AAFOh6mr3VNrD2XMOFRrYqes_c0wmQZ86CI" #bot token from @BotFather
+SmmPanelApi = "59135ff4f7f3fbd4bbcc66080d5cb5c2" # api key from https://xfollowr.com you can change api link
 bot = telebot.TeleBot(bot_token)
-admin_user_id = 7299213012
+admin_user_id = 5545907758
 welcome_bonus = 100
 ref_bonus = 500
 min_view = 100
 max_view = 30000
-required_channels = ['@pythonViewbooster']  # more channel same as
-payment_channel = "@pythonViewbooster"
+required_channels = ['@Smmpanel8']  # more channel same as
+payment_channel = "@K_B_S_Y"
 
 
 # Function to check if the user is a member of all required channels
@@ -164,7 +164,7 @@ Estimating views speed is difficult because the speed can vary depending on the 
 <b><u>•Is it possible to transfer balance to other users?</u></b>
 Yes, if your balance is more than 10k and you want to transfer all of them, you can send a request to support.
 
-🆘 In case you have any problem, contact @KsCoder"""
+🆘 In case you have any problem, contact @K_B_S_Y"""
 
     bot.reply_to(message, msg, parse_mode="html")
 
@@ -181,7 +181,7 @@ Yes, if your balance is more than 10k and you want to transfer all of them, you 
 ➎ 📦 1700K views for 50$ (0.03$ per K)
 ➏ 📦 5000K views for 100$ (0.02$ per K) </b>
 
-💰 Pay with Bitcoin, USDT, BSC, BUSD,  ... 👉🏻 @KsCoder
+💰 Pay with Bitcoin, USDT, BSC, BUSD,  ... 👉🏻 @K_B_S_Y
 
 💳️ Pay with Paypal, Paytm, WebMoney, Perfect Money, Payeer ... 👉🏻 @KsCoder
 
@@ -196,12 +196,12 @@ Other methods: 0%
     markup = InlineKeyboardMarkup()
     button1 = InlineKeyboardButton("💲 PayPal", url="https://t.me/KsCoder")
     button2 = InlineKeyboardButton("💳 Perfect Money",
-                                   url="https://t.me/KsCoder")
-    button6 = InlineKeyboardButton("💳 Webmoney", url="https://t.me/KsCoder")
+                                   url="https://t.me/K_B_S_Y")
+    button6 = InlineKeyboardButton("💳 Webmoney", url="https://t.me/Smmpanel8")
     button3 = InlineKeyboardButton("💎 Bitcoin, Litecoin, USDT...",
-                                   url="https://t.me/KsCoder")
-    button4 = InlineKeyboardButton("💸 Paytm", url="https://t.me/KsCoder")
-    button5 = InlineKeyboardButton("💰 Paytm", url="https://t.me/KsCoder")
+                                   url="https://t.me/Smmpanel8")
+    button4 = InlineKeyboardButton("💸 Paytm", url="https://t.me/K_B_S_Y")
+    button5 = InlineKeyboardButton("💰 Paytm", url="https://t.me/K_B_S_Y")
 
     markup.add(button1)
     markup.add(button2, button6)
@@ -281,7 +281,7 @@ def is_valid_link(link):
 def send_order_to_smm_panel(link, amount):
   """ Send the order to the SMM panel and return the result """
   try:
-    response = requests.post(url="https://easysmmpanel.com/api/v2",
+    response = requests.post(url="https://xfollowr.com/api/v2",
                              data={
                                  'key': SmmPanelApi,
                                  'action': 'add',
