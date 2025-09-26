@@ -1,0 +1,29 @@
+name: CI - conda env
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-activate-base: false
+          miniconda-version: "23.3.1"
+
+      - name: Create conda env from file
+        run: |
+          conda env create -f environment.yml
+          source "$(conda info --base)/etc/profile.d/conda.sh"
+          conda activate smm5-bot-env
+
+      - name: Verify python and imports
+        run: |
+          python --version
+          python -c "import requests, numpy, pandas; print('imports ok')"
